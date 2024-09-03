@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My web site</title>
+</head>
+<body>
+
+    <header>
+        <h1>CONDOM 2000</h1>
+    </header>
+
+    <button class="show-menu" onclick="toggleMenu()">Menu</button>
+
+    <nav class="navbar">
+        <ul id="nav-menu">
+            <li><a href="index.html">MASCULINE</a></li>
+            <li><a href="index2.html">FEMININE</a></li>
+        </ul>
+    </nav>
+
+    <div class="Titulo_cat"><h1><strong>MOST POPULAR:</strong></h1></div>
+    <div class="image-box-container">
+        <div class="image-box">
+            <img src="camisinha f.jpeg" alt="Imagem 1">
+            <div class="image-description"><strong>Female condom - R$17</strong></div>
+            <a href="#" class="buy-button" onclick="addToCart('Camisinha Feminina - R$17')">Buy</a>
+        </div>
+        <div class="image-box">
+            <img src="preservativo.jpeg" alt="Imagem 2">
+            <div class="image-description"><strong>lubricant - R$32</strong></div>
+            <a href="#" class="buy-button" onclick="addToCart('Lubrificante - R$32')">Buy</a>
+        </div>
+        <div class="image-box">
+            <img src="lub.jpeg" alt="Imagem 3">
+            <div class="image-description"><strong>strawberry lubricant - R$26,49</strong></div>
+            <a href="#" class="buy-button" onclick="addToCart('Lubrificante Morango - R$26,49')">Buy</a>
+        </div>
+    </div>
+
+    <div id="cart" class="cart">
+        <h2>Card</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">finish</button>
+    </div>
+
+    <div class="content">
+        <h1></h1>
+        <p>What we are?</p>
+        <p>We are condom 2000, playing a fundamental role in raising awareness and providing safety in sexual relations.</p>
+
+        <div class="white-space-depth"></div>
+        <br><br><br>
+
+        <div class="main-photo-container">
+            <button class="arrow" id="prev-button">&#10094;</button>
+            <img id="product-image" class="main-photo" src="mulher.jpg" alt="Produto" />
+            <button class="arrow" id="next-button">&#10095;</button>
+        </div>
+
+        <p>Even though there aren't many varieties of female condoms, we have several contraceptive methods to use..</p>
+
+        <br><br><br><br><br><br><br>
+        
+        <div class="scrollable-images">
+            <img src="limao.jpeg" alt="Imagem 1">
+            <img src="camisinha f.jpeg" alt="Imagem 2">
+            <img src="choco.jpeg" alt="Imagem 3">
+            <img src="hort.jpeg" alt="Imagem 4">
+            <img src="mix.jpeg" alt="Imagem 5">
+            <img src="mult.jpeg" alt="Imagem 6">
+            <img src="camisinha 2.jpeg" alt="Imagem 7">
+            <img src="camisinha 3.jpeg" alt="Imagem 8">
+            <img src="camisinha.jpeg" alt="Imagem 9">
+            <img src="contr.jpeg" alt="Imagem 10">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Made by [Dudu] [Dudu]</p>
+    </footer>
+
+    <button onclick="changeLanguage()">change Language</button>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        function addToCart(item) {
+            var cart = document.getElementById("cart");
+            var cartItems = document.getElementById("cart-items");
+            var li = document.createElement("li");
+            li.textContent = item;
+            cartItems.appendChild(li);
+            cart.style.display = 'block';
+        }
+
+        function checkout() {
+            alert("Finsh!");
+            document.getElementById("cart-items").innerHTML = '';
+            document.getElementById("cart").style.display = 'none';
+        }
+
+        function prevPhoto() {
+            window.location.href = "index.html";
+        }
+
+        function nextPhoto() {
+            window.location.href = "index.html";
+        }
+
+        document.getElementById("prev-button").addEventListener("click", prevPhoto);
+        document.getElementById("next-button").addEventListener("click", nextPhoto);
+
+        function changeLanguage() {
+            window.location.href = "index2.html"; // Alterar para o nome do arquivo que contém o conteúdo em outro idioma.
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fundo claro */
+    color: #333; /* Texto escuro */
+}
+
+/* Header styles */
+header {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #e0e0e0;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ddd;
+    width: 200px;
+    flex-direction: column;
+}
+
+.navbar ul.active {
+    display: block;
+}
+
+.navbar li {
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #aaa;
+}
+
+/* Botão Menu */
+.show-menu {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0;
+    margin-left: 20px;
+}
+
+/* Image Box Container */
+.image-box-container {
+    padding: 20px;
+    margin-top: 60px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Box */
+.image-box {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.image-box img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.image-description {
+    margin-left: 20px;
+    text-align: left;
+    flex-grow: 1;
+    color: #333;
+}
+
+/* Botão Comprar */
+.buy-button {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.buy-button:hover {
+    background-color: #218838; /* Cor mais escura no hover */
+}
+
+/* Carrinho */
+.cart {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.cart button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart button:hover {
+    background-color: #0056b3;
+}
+/* Carousel styles */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.carousel img {
+    max-width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Foto Principal com Navegação */
+.main-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.main-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.arrow {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+.arrow:hover {
+    background-color: #555;
+}
+
+/* Linha de Imagens Movíveis */
+.scrollable-images {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.scrollable-images img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.scrollable-images img:hover {
+    transform: scale(1.05);
+}
+.content {
+    text-align: center;
+    padding: 20px;
+}
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Certifique-se de que o lightbox fica acima de outros elementos */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+.white-space-depth {
+    width: 96vw; /* Ocupa toda a largura da tela */
+    height: 100px; /* Altura do espaço em branco, ajuste conforme necessário */
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    margin: 0; /* Remove qualquer margem externa */
+}
+
+/* styles.css */
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
